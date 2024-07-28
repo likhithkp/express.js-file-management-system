@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="issue">Issue:</label>
+        <input type="issue" id="issue" name="issue" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <% if(files && files.length){ %>
+            <h2>Files:</h2>
+            <ul>
+                <% files.forEach((file) => { %>
+                    <li><%= file %></li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <h3>No files yet...!</h3>
+        <% } %>
+    </div>
+</body>
+</html>

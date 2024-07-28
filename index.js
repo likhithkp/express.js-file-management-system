@@ -1,1 +1,34 @@
-console.log("")
+const express = require("express");
+const app = express();
+const path = require("path");
+const fs = require("fs");
+
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
+
+app.get("/", (req, res) => {
+    fs.readdir("./files", (err, files) => {
+        if(err){
+            console.error(err);
+            res.status(500).send("Internal server error");
+        }else{
+            res.render("index", {files: files});
+        };
+    });
+});
+
+app.post("/submit", (req, res) => {
+    fs.writeFile(`./files/${req.body.name.split(" ").join("")}.txt`, req.body.issue, (err) => {
+        if(err){
+            console.error(err);
+        }else{
+            res.redirect("/");
+        };
+    });
+});
+
+app.listen(3001, () => {
+    console.log("Server running at port 3001");
+});
