@@ -1,15 +1,14 @@
 
-# Express.js Practice: GET and POST Routes
+# Simple Form and File Management with Express.js
 
-This repository provides examples and practice exercises for handling GET and POST routes in an Express.js application. Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+This repository provides a basic web application built with Express.js that allows users to submit a form and manage files on the server. The application includes a simple form where users can input their name and an issue. Upon submission, the input is saved as a text file on the server. Additionally, the application displays the list of saved files.
 
 ## Features
 
-- **GET Routes**: Learn how to define and handle GET requests to retrieve data from the server.
-- **POST Routes**: Understand how to define and handle POST requests to submit data to the server.
-- **Request Handling**: Examples of parsing request parameters, query strings, and request bodies.
-- **Response Handling**: Learn how to send different types of responses, including JSON, HTML, and status codes.
-- **Modular Structure**: Organize routes into separate modules for better maintainability.
+- **Form Submission**: Users can submit a form with their name and issue. The input is saved as a text file on the server.
+- **File Management**: The server reads and displays a list of saved files.
+- **Error Handling**: Proper error handling for file read and write operations.
+- **EJS Templating**: Dynamic rendering of the file list using EJS.
 
 ## Getting Started
 
@@ -21,11 +20,11 @@ This repository provides examples and practice exercises for handling GET and PO
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/likhithkp/expressjs-practice-get-post-route.git
+   git clone https://github.com/likhithkp/expressjs-handle-get-post-data.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd expressjs-practice-get-post-route
+   cd expressjs-handle-get-post-data
    ```
 3. Install the dependencies:
    ```bash
@@ -43,10 +42,7 @@ This repository provides examples and practice exercises for handling GET and PO
 ### Example Routes
 
 - `GET /` - Home route
-- `GET /api/items` - Retrieve a list of items
-- `POST /api/items` - Add a new item
-- `GET /api/items/:id` - Retrieve a specific item by ID
-- `POST /api/contact` - Submit contact form data
+- `POST /submit` - Submit contact form data
 
 ## Contributing
 
