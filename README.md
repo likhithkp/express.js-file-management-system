@@ -20,11 +20,11 @@ This repository provides a basic web application built with Express.js that allo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/likhithkp/expressjs-practice-get-post-route.git
+   git clone https://github.com/likhithkp/expressjs-handle-get-post-data.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd expressjs-practice-get-post-route
+   cd expressjs-handle-get-post-data
    ```
 3. Install the dependencies:
    ```bash
@@ -42,10 +42,7 @@ This repository provides a basic web application built with Express.js that allo
 ### Example Routes
 
 - `GET /` - Home route
-- `GET /api/items` - Retrieve a list of items
-- `POST /api/items` - Add a new item
-- `GET /api/items/:id` - Retrieve a specific item by ID
-- `POST /api/contact` - Submit contact form data
+- `POST /submit` - Submit contact form data
 
 ## Contributing
 
