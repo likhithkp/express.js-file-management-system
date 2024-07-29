@@ -11,18 +11,22 @@
         <input type="text" id="name" name="name" required>
         <br>
         <label for="issue">Issue:</label>
-        <input type="issue" id="issue" name="issue" required>
+        <textarea id="issue" name="issue" required></textarea>
         <br>
         <button type="submit">Submit</button>
     </form>
-    <div>
-        <% if(files && files.length){ %>
+    <div class="file-container">
+        <% if (files && files.length) { %>
             <h2>Files:</h2>
-            <ul>
-                <% files.forEach((file) => { %>
-                    <li><%= file %></li>
-                <% }) %>
-            </ul>
+            <% files.forEach((file) => { %>
+                <div class="file-card">
+                    <h3><%= file %></h3>
+                    <div class="file-actions">
+                        <a href="/file/<%= file %>">Read More</a>
+                        <a href="/edit/<%= file %>">Edit</a>
+                    </div>
+                </div>
+            <% }) %>
         <% } else { %>
             <h3>No files yet...!</h3>
         <% } %>

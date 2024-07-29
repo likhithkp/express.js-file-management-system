@@ -1,0 +1,53 @@
+/* Styles for the overall body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styles for the main heading */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Styles for the file content container */
+.file-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the file name heading */
+.file-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Styles for the file content text */
+.file-content pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Styles for the back link */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
