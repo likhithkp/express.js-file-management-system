@@ -1,14 +1,17 @@
+# Express.js File Management App
 
-# Simple Form and File Management with Express.js
-
-This repository provides a basic web application built with Express.js that allows users to submit a form and manage files on the server. The application includes a simple form where users can input their name and an issue. Upon submission, the input is saved as a text file on the server. Additionally, the application displays the list of saved files.
+This repository provides a simple file management application built with Express.js. It demonstrates handling GET and POST requests, displaying and editing files, and implementing a basic form for submitting file data.
 
 ## Features
 
-- **Form Submission**: Users can submit a form with their name and issue. The input is saved as a text file on the server.
-- **File Management**: The server reads and displays a list of saved files.
-- **Error Handling**: Proper error handling for file read and write operations.
-- **EJS Templating**: Dynamic rendering of the file list using EJS.
+- **GET Routes**: 
+  - `/` - Displays a list of files with options to read or edit.
+  - `/file/:filename` - Shows the content of a specific file.
+  - `/edit/:filename` - Provides a form to rename a file.
+
+- **POST Routes**: 
+  - `/submit` - Submits a new file with the provided name and content.
+  - `/edit/:filename` - Submits changes to rename an existing file.
 
 ## Getting Started
 
@@ -20,11 +23,12 @@ This repository provides a basic web application built with Express.js that allo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/likhithkp/expressjs-handle-get-post-data.git
+   git clone https://github.com/likhithkp/express.js-file-management-system.git
+
    ```
 2. Navigate to the project directory:
    ```bash
-   cd expressjs-handle-get-post-data
+   cd express.js-file-management-system
    ```
 3. Install the dependencies:
    ```bash
@@ -41,8 +45,11 @@ This repository provides a basic web application built with Express.js that allo
 
 ### Example Routes
 
-- `GET /` - Home route
-- `POST /submit` - Submit contact form data
+- GET / - Home route displaying a list of files.
+- GET /file/:filename - View the content of a specific file.
+- GET /edit/:filename - Edit the name of a file.
+- POST /submit - Submit a new file.
+- POST /edit/:filename - Update the file name.
 
 ## Contributing
 
